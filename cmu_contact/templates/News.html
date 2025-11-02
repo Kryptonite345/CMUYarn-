@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='News.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body data-page="news">
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/cmu logo.png') }}" alt="City of Malabon University Logo">
+            <div class="logo-text">
+                <h4>CITY OF MALABON UNIVERSITY</h4>
+                <h5>Pampano St, Maya-Maya St, Malabon, Metro Manila</h5>
+            </div>
+        </div>
+
+        <div class="nav-bar">
+            <a href="{{ url_for('home') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/home logo.png') }}">
+                <span>HOME</span>
+            </a>
+            <a href="{{ url_for('admission') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/admission logo.png') }}">
+                <span>ADMISSION</span>
+            </a>
+            <a href="{{ url_for('courses') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/courses logo.png') }}">
+                <span>COURSES</span>
+            </a>
+            <a href="{{ url_for('news') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/news logo.png') }}">
+                <span>NEWS</span>
+            </a>
+            <a href="{{ url_for('contact_us') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/mail logo.png') }}">
+                <span>CONTACT US</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN SECTION -->
+    <section class="heading">
+        <h1>NEWS</h1>
+    </section>
+         
+    <p class="date1">NOVEMBER 27, 2025</p>
+    <div class="news1">
+        <img src="{{ url_for('static', filename='images/news_1.png') }}" alt="image1">
+        <p><b class="title">"LIBRARIANS AS ADVOCATES <br> AND AGENTS OF CHANGE IN THE ACADEME"</b><br><br>
+
+            Join us this 𝗡𝗼𝘃𝗲𝗺𝗯𝗲𝗿 𝟮𝟳, 𝟮𝟬𝟮𝟰, from 𝟭:𝟬𝟬 𝘁𝗼 𝟰:𝟬𝟬 𝗣𝗠 at 
+            the CMU Library for an inspiring talk by 𝗠𝗿. 𝗞𝗲𝘃𝗶𝗻 𝗖𝗼𝗻𝗿𝗮𝗱 𝗧𝗮𝗻𝘀𝗶𝗮𝗻𝗴𝗰𝗼, 
+            founder of the Magbasa Movement, on the topic '𝑳𝒊𝒃𝒓𝒂𝒓𝒊𝒂𝒏𝒔 𝒂𝒔 𝑨𝒅𝒗𝒐𝒄𝒂𝒕𝒆𝒔 𝒂𝒏𝒅
+            𝑨𝒈𝒆𝒏𝒕𝒔 𝒐𝒇 𝑪𝒉𝒂𝒏𝒈𝒆 𝒊𝒏 𝒕𝒉𝒆 𝑨𝒄𝒂𝒅𝒆𝒎𝒆.' <br><br>
+
+            Don't miss this opportunity to learn and be inspired! <br><br>
+
+            #CMULibrary <br>
+            #magbasamovement
+        </p>
+    </div>
+        
+    <p class="date2">NOVEMBER 22, 2025</p>
+    <div class="news2">
+        <img src="{{ url_for('static', filename='images/news_2.png') }}" alt="image2">
+        <p><b class="title">"13TH I.T. SKILLS OLYMPICS DELEGATES"<br><br>
+             UMAK IT SKILLS </b><br><br>
+            "𝑻𝒆𝒄𝒉 𝑻𝒊𝒕𝒂𝒏𝒔 𝒊𝒏 𝒕𝒉𝒆 𝑴𝒂𝒌𝒊𝒏𝒈!" <br><br> 
+            
+            Wishing all the best to the IT students competing in the UMak event on 
+            𝐍𝐨𝐯𝐞𝐦𝐛𝐞𝐫 𝟐𝟐, 𝟐𝟎𝟐𝟒! This is your moment to showcase your talent and skills 
+            in 𝐃𝐢𝐠𝐢𝐭𝐚𝐥 𝐄𝐥𝐞𝐜𝐭𝐫𝐨𝐧𝐢𝐜𝐬, 𝐄-𝐬𝐩𝐨𝐫𝐭𝐬, 𝐉𝐚𝐯𝐚 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐢𝐧𝐠, 𝐍𝐞𝐭𝐰𝐨𝐫𝐤𝐢𝐧𝐠, 𝐈𝐓 𝐐𝐮𝐢𝐳, 
+            𝐖𝐞𝐛 𝐃𝐞𝐬𝐢𝐠𝐧, 𝐋𝐢𝐧𝐮𝐱, 𝐚𝐧𝐝 𝐏𝐲𝐭𝐡𝐨𝐧 𝐏𝐫𝐨𝐠𝐫𝐚𝐦𝐦𝐢𝐧𝐠. Your hard work has 
+            already made you achievers, and we're excited to see you excel in every challenge— Best of luck, 
+            and let your remarkable skills shine through! <br><br>
+                
+            "𝑮𝒐𝒐𝒅 𝑳𝒖𝒄𝒌 𝒐𝒏 𝑻𝒉𝒊𝒔 𝑬𝒙𝒄𝒊𝒕𝒊𝒏𝒈 𝑱𝒐𝒖𝒓𝒏𝒆𝒚!" <br><br>
+            
+            : Spurgeon C. Malaca | VP for External Affairs JPCS-CMU<br>
+            : James Daryl C. Ong: | Photography Head JPCS-CMU<br>
+            : Shaina E. Toledo | Writing Assistant JPCS-CMU
+        </p>             
+    </div>
+         
+    <p class="date3">NOVEMBER 16, 2025</p>
+    <div class="news3">
+        <img src="{{ url_for('static', filename='images/news_3.png') }}" alt="image3">
+        <p><b class="title">Asian Heroes 2024</b><br>
+        <b><i>A PRESTIGIOUS TABLE BOOK BY DR. MARIA ROSA “BING” CARION</i></b><br><br>
+
+            CMU Cheers for Mayor Jeannie Sandoval, Asian Hero! <br><br>
+            The City of Malabon University (CMU) 
+            community overflows with pride celebrating our Chairman of the Board of Regents, Mayor 
+            Jeannie Sandoval's momentous achievement. Featured in "Asian Heroes 2024," a prestigious coffee 
+            table book by Dr. Maria Rosa "Bing" Carion, this honor is a testament to Mayor Sandoval's exceptional
+            leadership and unwavering dedication to Malabon City. <br><br>
+                
+            CMU beams with pride as Mayor Sandoval joins the 
+            ranks of Asia's outstanding leaders and changemakers.
+            "Asian Heroes 2024" spotlights individuals making significant contributions, championing positive change, 
+            and advocating for women and youth. <br><br>
+            
+            As Chairman of the CMU Board of Regents, Mayor Sandoval's visionary leadership shapes the university's path towards continued growth. Her guidance is
+            invaluable in providing quality education and
+            creating opportunities for CMU. <br><br>
+            Congratulations from the entire CMU family to Mayor Sandoval on this remarkable achievement!<br><br>
+            #CMUSulong <br>
+            #MalabonAhon
+        </p>
+    </div>
+
+    <p class="date4">NOVEMBER 14, 2025</p>
+    <div class="news4">
+        <img src="{{ url_for('static', filename='images/news_4.png') }}" alt="image4">
+        <p>
+            <b class="title">“FOURTH QUARTER NATIONWIDE <br> SIMULTANEOUS EARTHQUAKE DRILL (NSED)”</b><br>
+            CMU Community Showed Resilience in Nationwide Earthquake Drill <br><br>
+
+            The CMU community, from students and staffs to professors and administrators, participated enthusiastically in the 4th Quarter Nationwide Simultaneous Earthquake Drill.<br><br>
+
+            The drill held on Thursday, November 14, 2024, at 2:00 PM, the entire CMU community practiced the "Duck, Cover and Hold" protocol, simulating a response to a potential earthquake.<br><br>
+
+            The drill served as a valuable opportunity to reinforce earthquake safety procedures, promote awareness, and foster a culture of resilience within the CMU community.
+            As one community came together for this crucial drill, it demonstrated a collective commitment to safety and well-being in the face of potential disasters.<br><br>
+ 
+            #CMUSulong<br>
+            #MalabonAhon<br>
+            #BidaAngHanda<br>
+            #NSED2024<br>
+            #ResiliencePH
+        </p>         
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About CMU</h3>
+                <ul>
+                    <li><a href="#">Facts & History</a></li>
+                    <li><a href="#">Vision and Mission</a></li>
+                    <li><a href="#">Transparency Seal</a></li>
+                    <li><a href="#">Careers @ CMU</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Student Life</h3>
+                <ul>
+                    <li><a href="#">Programs Offerings</a></li>
+                    <li><a href="#">Sports Program</a></li>
+                    <li><a href="#">Become a CMU Student</a></li>
+                    <li><a href="#">Downloadable Forms</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                </div>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:email@cmu.edu.ph">Email Us</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i>
+                    <a><i>
+                            Pampano cor.,<br>
+                            Maya-Maya Sts., Longos, <br>
+                            Malabon City <br>
+                            City of Malabon University
+                        </i></a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+<div class="footer-bottom">
+            <img src="{{ url_for('static', filename='images/CMU_white logo.png') }}" alt="CMU Logo" class="footer-logo">
+            <p class="copyright-text">Copyright © 2025 City of Malabon University. All Rights Reserved</p>
+        </div>
+    </footer>
+    
+    
+    <div class="preloader" id="preloader">
+            <img src="{{ url_for('static', filename='images/cmu logo.png') }}" alt="Loading Logo" id="preloader-logo">
+            <div class="counter" id="preloader-counter">0%</div>
+        </div>
+
+    <!-- SCRIPT -->
+    <script>
+        const currentPage = document.body.getAttribute('data-page');
+        const navItems = document.querySelectorAll('.nav-bar .nav-item');
+
+        navItems.forEach(navItem => {
+            const text = navItem.textContent.trim().toLowerCase();
+            if (currentPage === text) {
+                navItem.classList.add('active');
+            }
+        });
+
+        // ✅ Keep preloader logic same
+        document.addEventListener('DOMContentLoaded', function () {
+            const preloader = document.getElementById('preloader');
+            const counter = document.getElementById('preloader-counter');
+            const logo = document.getElementById('preloader-logo');
+            const links = document.querySelectorAll('a');
+
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const target = this.getAttribute('target') || '_self'; 
+
+                    if (this.getAttribute('href') && this.getAttribute('href') !== '#') {
+                        e.preventDefault(); 
+                        preloader.classList.add('show'); 
+
+                        let count = 0;
+                        const interval = setInterval(() => {
+                            count += 1;
+                            counter.textContent = `${count}%`;
+
+                            logo.style.opacity = count / 100;
+                            if (count > 80) {
+                                logo.style.filter = `grayscale(${100 - count}%)`;
+                            }
+
+                            if (count >= 100) {
+                                clearInterval(interval);
+                                preloader.classList.remove('show');
+
+                                if (target === '_blank') {
+                                    window.open(this.href, '_blank'); 
+                                } else {
+                                    window.location.href = this.href; 
+                                }
+                            }
+                        }, 20); 
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

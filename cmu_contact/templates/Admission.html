@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='admission.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<!-- ✅ FIX 1: Confirm correct data-page -->
+<body data-page="admission">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/cmu logo.png') }}" alt="City of Malabon University Logo">
+            <div class="logo-text">
+                <h4>CITY OF MALABON UNIVERSITY</h4>
+                <h5>Pampano St, Maya-Maya St, Malabon, Metro Manila</h5>
+            </div>
+        </div>
+
+        <!-- ✅ FIX 2: ensure all nav items use Flask routes -->
+        <div class="nav-bar">
+            <a href="{{ url_for('home') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/home logo.png') }}" alt="Home Icon">
+                <span>HOME</span>
+            </a>
+            <a href="{{ url_for('admission') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/admission logo.png') }}" alt="Admission Icon">
+                <span>ADMISSION</span>
+            </a>
+            <a href="{{ url_for('courses') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/courses logo.png') }}" alt="Courses Icon">
+                <span>COURSES</span>
+            </a>
+            <a href="{{ url_for('news') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/news logo.png') }}" alt="News Icon">
+                <span>NEWS</span>
+            </a>
+            <a href="{{ url_for('contact_us') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/mail logo.png') }}" alt="Contact Us Icon">
+                <span>CONTACT US</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <section class="heading">
+        <div class="heading-container">
+            <h1>ADMISSION IS OPEN 2025-2026!</h1>
+            <h2>Welcome to the City of Malabon University - Admission for Academic Year 2025-2026</h2>
+        </div>
+    </section>
+
+    <main>
+        <section class="admission-info">
+            <img src="{{ url_for('static', filename='images/admission.png') }}" alt="Admission Background">
+            <div class="right">
+                <h3>Dear Students,</h3>
+                <h4>Subject:</h4>
+                On behalf of the entire City of Malabon University (CMU) community, I am delighted to extend a warm and heartfelt welcome to you as a newly admitted student for the academic year 2025-2026. Congratulations on reaching this exciting milestone in your academic journey! We are thrilled that you have chosen CMU as the institution where you will pursue your dreams, develop your skills, and grow into the professional and compassionate individual you aspire to be.
+                <br><br>
+                As an institution that prides itself on fostering academic excellence, integrity, and social responsibility, we are committed to providing a nurturing environment where you will be empowered to reach your fullest potential. Whether you are continuing your studies from high school, or returning to education after a break, we are here to support you every step of the way.
+                <br><br>
+                Our dynamic faculty, innovative teaching methods, and state-of-the-art facilities are all designed to create an immersive learning experience that will prepare you for the challenges of tomorrow. In addition to our rigorous academic programs, CMU also offers a variety of extracurricular activities, student organizations, and community service initiatives, all of which are integral to your holistic development.</p>
+            </div>
+        </section>
+
+        <section class="contact-info">
+            <div class="container">
+                <div class="left">
+                    <h3>Contact Us:</h3>
+                    <p>
+                        Should you have any queries or require clarification, our dedicated team is here to assist you.
+                        Reach out to us via email at 
+                        <a href="mailto:u.admissions@cityofmalabonuniversity.edu.ph">u.admissions@cityofmalabonuniversity.edu.ph</a>
+                        or visit our Admission and Scholarship Unit, located at Room 103 Innovation Bldg., City of Malabon University.
+                    </p>
+                </div>
+                <div class="right">
+                    <h3>Connect with us:</h3>
+                    <p>
+                        Website: <a href="https://www.cityofmalabonuniversity.edu.ph" target="_blank">https://www.cityofmalabonuniversity.edu.ph</a><br>
+                        Facebook: City of Malabon University Official<br><br>
+                        For further details kindly refer to the link:<br> 
+                        <a href="http://tinyurl.com/ADMISSION-2024-2025">http://tinyurl.com/ADMISSION-2024-2025</a><br><br>
+                        #CMUSulong #MalabonAhon
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About CMU</h3>
+                <ul>
+                    <li><a href="#">Facts & History</a></li>
+                    <li><a href="#">Vision and Mission</a></li>
+                    <li><a href="#">Transparency Seal</a></li>
+                    <li><a href="#">Careers @ CMU</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Student Life</h3>
+                <ul>
+                    <li><a href="#">Programs Offerings</a></li>
+                    <li><a href="#">Sports Program</a></li>
+                    <li><a href="#">Become a CMU Student</a></li>
+                    <li><a href="#">Downloadable Forms</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:email@cmu.edu.ph">Email Us</a></li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                    <a><i>
+                            Pampano cor.,<br>
+                            Maya-Maya Sts., Longos, <br>
+                            Malabon City <br>
+                            City of Malabon University
+                        </i></a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+<div class="footer-bottom">
+            <img src="{{ url_for('static', filename='images/CMU_white logo.png') }}" alt="CMU Logo" class="footer-logo">
+            <p class="copyright-text">Copyright © 2025 City of Malabon University. All Rights Reserved</p>
+        </div>
+    </footer>
+    
+    
+    <div class="preloader" id="preloader">
+            <img src="{{ url_for('static', filename='images/cmu logo.png') }}" alt="Loading Logo" id="preloader-logo">
+            <div class="counter" id="preloader-counter">0%</div>
+        </div>
+
+    <!-- ✅ FIX 3: Simplify navbar highlighting logic -->
+    <script>
+        const currentPage = document.body.getAttribute('data-page');
+        const navItems = document.querySelectorAll('.nav-bar .nav-item');
+
+        navItems.forEach(navItem => {
+            const text = navItem.textContent.trim().toLowerCase();
+            if (currentPage === text) {
+                navItem.classList.add('active');
+            }
+        });
+
+        // ✅ Keep preloader logic same
+        document.addEventListener('DOMContentLoaded', function () {
+            const preloader = document.getElementById('preloader');
+            const counter = document.getElementById('preloader-counter');
+            const logo = document.getElementById('preloader-logo');
+            const links = document.querySelectorAll('a');
+
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const target = this.getAttribute('target') || '_self'; 
+
+                    if (this.getAttribute('href') && this.getAttribute('href') !== '#') {
+                        e.preventDefault(); 
+                        preloader.classList.add('show'); 
+
+                        let count = 0;
+                        const interval = setInterval(() => {
+                            count += 1;
+                            counter.textContent = `${count}%`;
+
+                            logo.style.opacity = count / 100;
+                            if (count > 80) {
+                                logo.style.filter = `grayscale(${100 - count}%)`;
+                            }
+
+                            if (count >= 100) {
+                                clearInterval(interval);
+                                preloader.classList.remove('show');
+
+                                if (target === '_blank') {
+                                    window.open(this.href, '_blank'); 
+                                } else {
+                                    window.location.href = this.href; 
+                                }
+                            }
+                        }, 20); 
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

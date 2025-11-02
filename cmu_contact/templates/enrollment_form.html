@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>City of Malabon University Enrollment Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='enrollment-form.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body data-page="enroll">
+
+<!-- HEADER -->
+<div class="header">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='images/cmu logo.png') }}" alt="City of Malabon University Logo">
+        <div class="logo-text">
+            <h4>CITY OF MALABON UNIVERSITY</h4>
+            <h5>Pampano St, Maya-Maya St, Malabon, Metro Manila</h5>
+        </div>
+    </div>
+    <div class="nav-bar">
+        <!-- FIX 2: use Flask route names instead of static .html links -->
+        <a href="{{ url_for('home') }}" class="nav-item">
+            <img src="{{ url_for('static', filename='images/home logo.png') }}" alt="Home Icon">
+            <span>HOME</span>
+        </a>
+        <a href="{{ url_for('admission') }}" class="nav-item">
+            <img src="{{ url_for('static', filename='images/admission logo.png') }}" alt="Admission Icon">
+            <span>ADMISSION</span>
+        </a>
+        <a href="{{ url_for('courses') }}" class="nav-item">
+            <img src="{{ url_for('static', filename='images/courses logo.png') }}" alt="Courses Icon">
+            <span>COURSES</span>
+        </a>
+        <a href="{{ url_for('news') }}" class="nav-item">
+            <img src="{{ url_for('static', filename='images/news logo.png') }}" alt="News Icon">
+            <span>NEWS</span>
+        </a>
+        <a href="{{ url_for('contact_us') }}" class="nav-item">
+            <img src="{{ url_for('static', filename='images/mail logo.png') }}" alt="Contact Us Icon">
+            <span>CONTACT US</span>
+        </a>
+    </div>
+</div>
+
+        <section class="heading">
+            <h1>Enrollment Form</h1>
+        </section>
+
+        <div class="form">
+            <form id="enrollmentForm" action="{{ url_for('submit_enrollment') }}" method="POST">
+                <div>
+                    <label for="program">Program Applied For:</label><br>
+                    <select name="program" id="program" required>
+                    <!-- Default placeholder option -->
+                    <option value="" disabled selected>Select Program Applied For</option>
+                        <optgroup label="COLLEGE OF ARTS AND SCIENCE (CAS)">
+                            <option value="journalism">Bachelor of Arts in Journalism</option>
+                            <option value="political_science">Bachelor of Arts in Political Science</option>
+                            <option value="public_administration">Bachelor of Public Administration</option>
+                            <option value="social_work">Bachelor of Science in Social Work</option>
+                        </optgroup>
+                        <optgroup label="COLLEGE OF CRIMINOLOGY">
+                            <option value="criminology">Bachelor of Science in Criminology</option>
+                        </optgroup>
+                        <optgroup label="COLLEGE OF ACCOUNTANCY (C.O.A)">
+                            <option value="accountancy">Bachelor of Science in Accountancy</option>
+                            <option value="management_accounting">Bachelor of Science in Management Accounting</option>
+                        </optgroup>
+                        <optgroup label="COLLEGE OF BUSINESS AND ACCOUNTANCY (C.B.A)">
+                            <option value="financial_management">B.S.B.A in Financial Management</option>
+                            <option value="human_resource">B.S.B.A in Human Resource Management</option>
+                            <option value="marketing">B.S.B.A in Marketing Management</option>
+                        </optgroup>
+                        <optgroup label="COLLEGE OF COMPUTER STUDIES (CCS)">
+                            <option value="bsit">Bachelor of Science in Information Technology</option>
+                        </optgroup>
+                        <optgroup label="COLLEGE OF TEACHER EDUCATION (C.T.E)">
+                            <option value="beed">Bachelor in Elementary Education</option>
+                            <option value="bse_english">BSE in English</option>
+                            <option value="bse_math">BSE in Mathematics</option>
+                            <option value="bse_social_studies">BSE in Social Studies</option>
+                            <option value="beced">Bachelor of Early Childhood Education</option>
+                        </optgroup>
+                        <optgroup label="SCHOOL OF GRADUATE STUDIES (S.G.S)">
+                            <option value="dem">Doctor of Educational Management</option>
+                            <option value="dba">Doctor of Business Administration</option>
+                            <option value="dpa">Doctor of Public Administration</option>
+                            <option value="maem">Master of Arts in Educational Management</option>
+                            <option value="mba">Master in Business Administration</option>
+                            <option value="mpa">Master in Public Administration</option>
+                        </optgroup>
+                        <optgroup label="SCHOOL OF PROFESSIONAL AND CERTIFICATE PROGRAM">
+                            <option value="professional_education">Professional Education Program</option>
+                        </optgroup>
+                        <optgroup label="POST BACCALAUREATE PROGRAM">
+                            <option value="cpe">Certificate on Professional Education (C.P.E) 18 units</option>
+                            <option value="refresher">Refresher Course 12-15 units</option>
+                        </optgroup>
+                    </select>
+                </div>
+        
+                <br>
+
+                    <div class="bold-heading">PERSONAL INFORMATION</div>
+                    <div>
+                        <label for="personal_name">Name:</label>
+                        <input type="text" name="last_name" placeholder="Last Name" required>
+                        <input type="text" name="given_name" placeholder="Given Name" required>
+                        <input type="text" name="middle_name" placeholder="Middle Name" required>
+                        <input type="text" name="ext_name" placeholder="Ext. Name">
+                    </div>
+                    <div>
+                        <label>Gender:</label> <input type="text" name="gender">
+                        <label>Civil Status:</label> <input type="text" name="civil_status">
+                        <label>Date of Birth:</label> <input type="date" name="birth_date">
+                    </div>
+                    <div>
+                        <label>Place of Birth:</label> <input type="text" name="birth_place">
+                        <label>Nationality:</label> <input type="text" name="nationality">
+                        <label>Religion:</label> <input type="text" name="religion">
+                    </div>
+                    <div>
+                        <label>Cel/Tel No.:</label> <input type="text" name="contact_no">
+                        <label>Email Address:</label> <input type="email" name="email_address">
+                    </div>
+                    <div>
+                        <label>Permanent Address:</label>
+                        <input type="text" name="address" placeholder="                             No., Street, Barangay, City, Province, Zipcode" required  span style="display: inline-block; width: 500px; "></span>
+                    </div>
+                    <div>
+                        <label>Residence:</label>
+                        ( <input type="radio" name="residence" value="with_parents" required> With Parents )
+                        ( <input type="radio" name="residence" value="with_relatives" required> With Relatives )
+                        ( <input type="radio" name="residence" value="with_guardian" required> With Guardian )
+                        ( <input type="radio" name="residence" value="boarding" required> Boarding )
+                    </div>
+                    <div>
+                        <label>Are you a member of any indigenous group?</label>
+                        ( <input type="radio" name="indigenous_group" value="yes" required> YES )
+                        ( <input type="radio" name="indigenous_group" value="no" required> NO )
+                        If YES, please specify: <input type="text" name="indigenous_details" span style="display: inline-block; width: 300px; "></span>
+                    </div>
+
+                <br>
+        
+                <br>
+
+                    <div class="bold-heading">FAMILY BACKGROUND</div>
+                    <div>
+                        <label for="father_name">Father's Name:</label>
+                        <input type="text" id="father_name" name="father_name" required>
+                        ( <input type="checkbox" name="father_status" value="living"> Living 
+                        <input type="checkbox" name="father_status" value="deceased"> Deceased )
+                        <br>
+                        <label>Occupation:</label> <input type="text" name="father_occupation" required>
+                        <label>Monthly Income:</label> <input type="number" name="father_income" required>
+                        <label>Contact No:</label> <input type="text" name="father_contact" required>
+                    </div>
+
+                    <div>
+                        <label for="mother_name">Mother's Name:</label>
+                        <input type="text" id="mother_name" name="mother_name" required>
+                        ( <input type="checkbox" name="mother_status" value="living"> Living 
+                        <input type="checkbox" name="mother_status" value="deceased"> Deceased )
+                        <br>
+                        <label>Occupation:</label> <input type="text" name="mother_occupation" required>
+                        <label>Monthly Income:</label> <input type="number" name="mother_income" required>
+                        <label>Contact No:</label> <input type="text" name="mother_contact" required>
+                    </div>
+                    
+                    <div>
+                        <label for="guardian_name">Guardian's Name:</label>
+                        <input type="text" id="guardian_name" name="guardian_name" required>
+                        <label>Relationship:</label> <input type="text" name="guardian_relationship" required>
+                        <br>
+                        <label>Occupation:</label> <input type="text" name="guardian_occupation" required>
+                        <label>Monthly Income:</label> <input type="number" name="guardian_income" required>
+                        <label>Contact No:</label> <input type="text" name="guardian_contact" required>
+                    </div>
+
+                <br>
+        
+                <br>
+                
+                    <div class="bold-heading">EDUCATIONAL BACKGROUND</div>
+                    <div>
+                        <label for="school_name">Last school attended or where you are currently completing Secondary Level Education:</label>
+                        <br>
+                        <label>Name of School:</label>
+                        <input type="text" id="school_name" name="school_name" required span style="display: inline-block; width: 500px; "></span>
+                        <br>
+                        <label>Complete Address:</label>
+                        <input type="text" name="school_address" required span style="display: inline-block; width: 500px; "></span>
+                        <br>
+                        <label>Learner's Reference No.:</label>
+                        <input type="text" name="lrn" required>
+                    </div>
+                    
+                    <div>
+                        <label>Do you have any PHYSICAL DISABILITY OR CONDITION that requires special attention or would make it difficult for you to take a regular test?</label>
+                        <br>
+                        ( <input type="radio" name="disability" value="no" required> NO ) 
+                        ( <input type="radio" name="disability" value="yes" required> YES ) 
+                        If YES, please specify: <input type="text" name="disability_details" span style="display: inline-block; width: 500px; "></span>
+                    </div>
+
+                <br>
+
+                    <div class="bold-heading">OTHER INFO</div>
+                    <div>
+                        <label>Email:</label>
+                        <input type="email" id="email" name="school_name" required span style="display: inline-block; width: 300px; "></span>
+                        <br>
+                        <label>Facebook Account Link:</label>
+                        <input type="url" name="facebook" required span style="display: inline-block; width: 300px; "></span>
+                        <br>
+                    </div>
+
+                <br>
+
+                    <div class="no-print">
+                            <div class="bold-heading">PROFILE // GRADE // TIME SUBMITED</div>
+                        <div>
+                            <label>Upload Your 2x2 Pic:</label>
+                            <input type="file" id="pic" name="pic" accept=".png, .jpg" required>
+                            <br>
+                            <label>Upload Your Latest Form 138:</label>
+                            <input type="file" name="password" accept=".docx, .pdf" multiple required>
+                            <br>
+                            <label>Time Submitted:</label>
+                            <input type="time" name="time" required>
+                            <br>
+                        </div>
+                    </div>
+
+                <br>
+
+                <div>
+                    <p><i>
+                        <input type="checkbox" name="check" id="check" required>
+                        I hereby confirm that all the information I have provided is accurate, and any discrepancies may result in the cancellation of my admission.
+                    </i></p>
+
+                    <br>
+
+                    <div style="display: flex; justify-content: space-between; align-items: flex-end;">
+                        
+                        <div>
+                            <label></label>
+                            <input type="Applicant Name" id="Applicant Name" name="Applicant Name" required span style="display: inline-block; width: 230px; border-bottom: 1px solid #000;"></span>
+                            <br>
+                            <label style="display: inline-block; margin-top: 5px; padding-left: 30px">APPLICANT'S FULL NAME</label>
+                            <br>
+                            <label style="display: inline-block; padding-left: 27px">(Signature over Printed Name)</label>
+                        </div>
+                        
+                        
+                        <div>
+                            <label></label>
+                            <input type="Applicant Name" id="Applicant Name" name="Applicant Name" required span style="display: inline-block; width: 150px; border-bottom: 1px solid #000;"></span>
+                            <br>
+                            <label style="display: inline-block; margin-top: 5px; padding-left: 65px">DATE</label>
+                        </div>
+                    </div>
+                </div>
+
+                <br><br>
+
+                <div class="btns">
+                    <input type="reset" name="reset" id="reset" value="RESET">
+                    <input type="submit" name="submit" id="submit" value="SUBMIT" class="submit">
+                    <button type="button"  id="printBtn" name="print" style="padding: 10px 30px; height: 38px; width: 115px; color: white; background-color: rgb(109, 109, 109); margin-top:5px;">PRINT</button> 
+                </div>
+                
+                <div class="popup" id="popup">
+                    <img src="images/check.png">
+                    <h2>Thank You!</h2>
+                    <p>Your details have been successfully submitted. Thanks!</p>
+                    <button type="button" onclick="closePopup()">OK</button>
+                </div>
+            </form>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About CMU</h3>
+                    <ul>
+                        <li><a href="#">Facts & History</a></li>
+                        <li><a href="#">Vision and Mission</a></li>
+                        <li><a href="#">Transparency Seal</a></li>
+                        <li><a href="#">Careers @ CMU</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-section">
+                    <h3>Student Life</h3>
+                    <ul>
+                        <li><a href="#">Programs Offerings</a></li>
+                        <li><a href="#">Sports Program</a></li>
+                        <li><a href="#">Become a CMU Student</a></li>
+                        <li><a href="#">Downloadable Forms</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                    </div>
+                </div>
+        
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:email@cmu.edu.ph">Email Us</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> 
+                    <a><i>
+                            Pampano cor.,<br>
+                            Maya-Maya Sts., Longos, <br>
+                            Malabon City <br>
+                            City of Malabon University
+                        </i></a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+<div class="footer-bottom">
+            <img src="{{ url_for('static', filename='images/CMU_white logo.png') }}" alt="CMU Logo" class="footer-logo">
+            <p class="copyright-text">Copyright © 2025 City of Malabon University. All Rights Reserved</p>
+        </div>
+    </footer>
+    
+    
+    <div class="preloader" id="preloader">
+            <img src="{{ url_for('static', filename='images/cmu logo.png') }}" alt="Loading Logo" id="preloader-logo">
+            <div class="counter" id="preloader-counter">0%</div>
+        </div>
+
+        <script>
+            const form = document.getElementById("enrollmentForm");
+            const popup = document.getElementById("popup");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault(); 
+                openPopup(); 
+            });
+
+            function openPopup() {
+                popup.classList.add("open-popup");
+            }
+
+            function closePopup() {
+            popup.classList.remove("open-popup");
+            setTimeout(() => {
+                location.reload(); 
+            }, 300); 
+            }
+
+            const currentPage = document.body.getAttribute('data-page');
+            const navItems = document.querySelectorAll('.nav-bar .nav-item');
+            navItems.forEach(navItem => {
+                const text = navItem.textContent.trim().toLowerCase();
+                if (currentPage === text) {
+                    navItem.classList.add('active');
+                }
+            });
+            // PRINT FUNCTION
+            document.getElementById("printBtn").addEventListener("click", function () {
+                // Hide buttons and popup temporarily for clean print view
+                const btns = document.querySelector(".btns");
+                const popup = document.querySelector(".popup");
+                const footer = document.querySelector("footer");
+
+                btns.style.display = "none";
+                if (popup) popup.style.display = "none";
+                if (footer) footer.style.display = "none";
+
+                window.print(); // open browser print dialog
+
+                // Restore after printing
+                setTimeout(() => {
+                    btns.style.display = "flex";
+                    if (popup) popup.style.display = "block";
+                    if (footer) footer.style.display = "block";
+                }, 1000);
+            });
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const preloader = document.getElementById('preloader');
+                const counter = document.getElementById('preloader-counter');
+                const logo = document.getElementById('preloader-logo');
+                const links = document.querySelectorAll('a');
+
+                links.forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        const target = this.getAttribute('target') || '_self'; 
+
+                        if (this.getAttribute('href') && this.getAttribute('href') !== '#') {
+                            e.preventDefault(); 
+
+                            preloader.classList.add('show'); 
+
+                            let count = 0;
+                            const interval = setInterval(() => {
+                                count += 1;
+                                counter.textContent = `${count}%`;
+
+                                logo.style.opacity = count / 100;
+                                if (count > 80) {
+                                    logo.style.filter = `grayscale(${100 - count}%)`;
+                                }
+
+                                if (count >= 100) {
+                                    clearInterval(interval);
+                                    preloader.classList.remove('show');
+
+                                    if (target === '_blank') {
+                                        window.open(this.href, '_blank'); 
+                                    } else {
+                                        window.location.href = this.href; 
+                                    }
+                                }
+                            }, 20); 
+                        }
+                    });
+                });
+            });
+        </script>
+    </body>
+    </html>

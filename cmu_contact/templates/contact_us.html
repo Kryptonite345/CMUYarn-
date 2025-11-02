@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CONTACT US</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact-us.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body data-page="contact us">
+    
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/cmu logo.png') }}" alt="City of Malabon University Logo">
+            <div class="logo-text">
+                <h4>CITY OF MALABON UNIVERSITY</h4>
+                <h5>Pampano St, Maya-Maya St, Malabon, Metro Manila</h5>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <a href="{{ url_for('home') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/home logo.png') }}" alt="Home Icon">
+                <span>HOME</span>
+            </a>
+            <a href="{{ url_for('admission') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/admission logo.png') }}" alt="Admission Icon">
+                <span>ADMISSION</span>
+            </a>
+            <a href="{{ url_for('courses') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/courses logo.png') }}" alt="Courses Icon">
+                <span>COURSES</span>
+            </a>
+            <a href="{{ url_for('news') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/news logo.png') }}" alt="News Icon">
+                <span>NEWS</span>
+            </a>
+            <a href="{{ url_for('contact_us') }}" class="nav-item active">
+                <img src="{{ url_for('static', filename='images/mail logo.png') }}" alt="Contact Us Icon">
+                <span>CONTACT US</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- CONTACT SECTION -->
+    <section class="heading">
+        <h1>Contact Us</h1>
+    </section> 
+
+    <section class="ftco-section" style="box-shadow: 0 0 12px rgb(2, 7, 83);">
+        <div class="container">
+            <div class="contact-container" style="box-shadow: 0 0 12px rgb(2, 7, 83);">
+                
+                <!-- LEFT PANEL -->
+                <div class="info-wrap">
+                    <h3>Let's get in touch</h3>
+                    <p style="font-size: 23px;">We're open for any inquiry or suggestion.</p>
+
+                    <div class="dbox">
+                        <div class="icon"><span class="fa fa-map-marker"></span></div>
+                        <div class="text">
+                            <p style="font-size: 22px;"><span style="font-size: 20px;">Address:</span> Pampano cor., Maya-Maya Sts., Longos City of Malabon</p>
+                        </div>
+                    </div>
+
+                    <div class="dbox">
+                        <div class="icon"><span class="fa fa-phone"></span></div>
+                        <div class="text">
+                            <p style="font-size: 20px;"><span style="font-size: 20px;">Phone:</span> <a href="tel://09468293580">09468293580</a></p>
+                        </div>
+                    </div>
+
+                    <div class="dbox">
+                        <div class="icon"><span class="fa fa-paper-plane"></span></div>
+                        <div class="text">
+                            <p style="font-size: 20px;"><span style="font-size: 20px;">Email:</span> <a href="mailto:ro@cityofmalabonuniversity.edu.ph">ro@cityofmalabonuniversity.edu.ph</a></p>
+                        </div>
+                    </div>
+
+                    <div class="dbox">
+                        <div class="icon"><span class="fa fa-globe"></span></div>
+                        <div class="text">
+                            <p style="font-size: 20px;"><span style="font-size: 20px;">Website:</span> <a href="#">https://cityofmalabonuniversity.edu.ph/</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT FORM PANEL -->
+                <div class="contact-wrap" style="box-shadow: 0 0 12px rgb(2, 7, 83);">
+                    <h3>Get in touch</h3>
+
+                    <!-- FIXED FORM ACTION -->
+                    <form id="contactForm" method="POST" action="{{ url_for('submit_message') }}">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" name="message" placeholder="Message" required></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" value="Send Message" class="btn btn-primary">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About CMU</h3>
+                    <ul>
+                        <li><a href="#">Facts & History</a></li>
+                        <li><a href="#">Vision and Mission</a></li>
+                        <li><a href="#">Transparency Seal</a></li>
+                        <li><a href="#">Careers @ CMU</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-section">
+                    <h3>Student Life</h3>
+                    <ul>
+                        <li><a href="#">Programs Offerings</a></li>
+                        <li><a href="#">Sports Program</a></li>
+                        <li><a href="#">Become a CMU Student</a></li>
+                        <li><a href="#">Downloadable Forms</a></li>
+                    </ul>
+                </div>
+        
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                        <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                        <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                        <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                    </div>
+                </div>
+        
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:email@cmu.edu.ph">Email Us</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> 
+                    <a><i>
+                            Pampano cor.,<br>
+                            Maya-Maya Sts., Longos, <br>
+                            Malabon City <br>
+                            City of Malabon University
+                        </i></a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+<div class="footer-bottom">
+            <img src="{{ url_for('static', filename='images/CMU_white logo.png') }}" alt="CMU Logo" class="footer-logo">
+            <p class="copyright-text">Copyright © 2025 City of Malabon University. All Rights Reserved</p>
+        </div>
+    </footer>
+    
+    
+    <div class="preloader" id="preloader">
+            <img src="{{ url_for('static', filename='images/cmu logo.png') }}" alt="Loading Logo" id="preloader-logo">
+            <div class="counter" id="preloader-counter">0%</div>
+        </div>
+
+    <script>
+        const form = document.getElementById("contactForm");
+        const popup = document.getElementById("popup");
+
+        form.addEventListener("submit", async function (event) {
+            event.preventDefault(); 
+            const formData = new FormData(form);
+            const response = await fetch("/submit", { method: "POST", body: formData });
+            const result = await response.json();
+            alert(result.message);
+            if(result.status === "success") openPopup();
+        });
+
+        function openPopup() {
+            popup.classList.add("open-popup");
+        }
+
+        function closePopup() {
+            popup.classList.remove("open-popup");
+            setTimeout(() => {
+                location.reload(); 
+            }, 300); 
+        }
+
+        const currentPage = document.body.getAttribute('data-page');
+        const navItems = document.querySelectorAll('.nav-bar .nav-item');
+    
+        navItems.forEach(navItem => {
+            const href = navItem.getAttribute('href').toLowerCase().replace('.html', '');
+            if (currentPage === href) {
+                navItem.classList.add('active'); 
+            }
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const preloader = document.getElementById('preloader');
+            const counter = document.getElementById('preloader-counter');
+            const logo = document.getElementById('preloader-logo');
+            const links = document.querySelectorAll('a');
+
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const target = this.getAttribute('target') || '_self'; 
+                    if (this.getAttribute('href') && this.getAttribute('href') !== '#') {
+                        e.preventDefault(); 
+                        preloader.classList.add('show'); 
+
+                        let count = 0;
+                        const interval = setInterval(() => {
+                            count += 1;
+                            counter.textContent = `${count}%`;
+                            logo.style.opacity = count / 100;
+                            if (count > 80) logo.style.filter = `grayscale(${100 - count}%)`;
+                            if (count >= 100) {
+                                clearInterval(interval);
+                                preloader.classList.remove('show');
+                                if (target === '_blank') {
+                                    window.open(this.href, '_blank'); 
+                                } else {
+                                    window.location.href = this.href; 
+                                }
+                            }
+                        }, 20); 
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

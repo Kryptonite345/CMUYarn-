@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City of Malabon University</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Home.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body data-page="home">
+    <div class="header">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/cmu logo.png') }}" alt="City of Malabon University Logo">
+            <div class="logo-text">
+                <h4>CITY OF MALABON UNIVERSITY</h4>
+                <h5>Pampano St, Maya-Maya St, Malabon, Metro Manila</h5>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <a href="{{ url_for('home') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/home logo.png') }}">
+                <span>HOME</span>
+            </a>
+            <a href="{{ url_for('admission') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/admission logo.png') }}">
+                <span>ADMISSION</span>
+            </a>
+            <a href="{{ url_for('courses') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/courses logo.png') }}">
+                <span>COURSES</span>
+            </a>
+            <a href="{{ url_for('news') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/news logo.png') }}">
+                <span>NEWS</span>
+            </a>
+            <a href="{{ url_for('contact_us') }}" class="nav-item">
+                <img src="{{ url_for('static', filename='images/mail logo.png') }}">
+                <span>CONTACT US</span>
+            </a>
+        </div>
+    </div>
+
+    <div class="content-container">
+        <div class="content">
+            <h1>City of Malabon University</h1>
+            <p>Founded 1994</p>
+            <a href="{{ url_for('enroll') }}">Enroll Now</a>
+        </div>
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='images/cmu_logo 2.png') }}" alt="CMU Logo">
+        </div>
+    </div>
+
+    <div class="footer-container">
+        <div class="footer1">
+            <div class="footer-item">
+                <img src="{{ url_for('static', filename='images/LOGO 1.png') }}" alt="CHED Logo">
+                <p>
+                    <span>Commission on</span><br>
+                    <span>Higher Education</span>
+                </p>
+            </div>
+            <div class="footer-item">
+                <img src="{{ url_for('static', filename='images/LOGO 2.png') }}" alt="Republic of the Philippines Logo">
+                <p>Republika ng Pilipinas</p>
+            </div>
+            <div class="footer-item">
+                <img src="{{ url_for('static', filename='images/LOGO 3.png') }}" alt="Bagong Pilipinas Logo">
+                <p>Bagong Pilipinas</p>
+            </div>
+            <div class="footer-item">
+                <img src="{{ url_for('static', filename='images/LOGO 4.png') }}" alt="DepEd Logo">
+                <p>
+                    <span>Kagawaran ng</span><br>
+                    <span>Edukasyon</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="background-2">
+        <div class="content-section">
+            <div class="text-overlay">
+                <h2>University for your</h2>
+                <h2>Future Career</h2>
+                <p>
+                    We Believe in Nurturing Not Just Academic Achievements But Also The Individual Talents And Potential 
+                    Within Each Student. Our Commitment To Progressive Education Extends Beyond The Classroom, Encouraging Students To Embrace Critical Thinking, Creativity, And Community Engagement.
+                </p>
+                <a href="{{ url_for('courses') }}">Explore Programs</a>
+            </div>
+
+            <div class="images-career">
+                <img src="{{ url_for('static', filename='images/career 1.png') }}" alt="Career 1" style="box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+                <img src="{{ url_for('static', filename='images/career 2.png') }}" alt="Career 2" style="box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+                <img src="{{ url_for('static', filename='images/career 3.png') }}" alt="Career 3" style="box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+                <img src="{{ url_for('static', filename='images/career 4.png') }}" alt="Career 4" style="box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);">
+            </div>
+        </div>
+    </div>
+
+    <div class="background-3">
+        <div class="table-section">
+            <h2>Colleges at City of Malabon University</h2>
+            <table class="college-table">
+                <thead>
+                    <tr>
+                        <th>Colleges</th>
+                        <th>College Name</th>
+                        <th>Description</th>
+                        <th>Available Slots</th>
+                        <th>Maximum Students</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CCS</td>
+                        <td>College of Computer Studies</td>
+                        <td>Offers programs in computer science and information technology, preparing students for careers in tech industries.</td>
+                        <td>450</td>
+                        <td>1500+</td>
+                    </tr>
+                    <tr>
+                        <td>CRIM</td>
+                        <td>College of Criminology</td>
+                        <td>Focuses on criminal justice and law enforcement education, training future criminologists and police officers.</td>
+                        <td>370</td>
+                        <td>1500+</td>
+                    </tr>
+                    <tr>
+                        <td>CTE</td>
+                        <td>College of Teacher Education</td>
+                        <td>Prepares students for teaching careers, with emphasis on educational theories and practical applications.</td>
+                        <td rowspan="2">510</td>
+                        <td>1500+</td>
+                    </tr>
+                    <tr>
+                        <td>CBA</td>
+                        <td>College of Business and Accountancy</td>
+                        <td>Provides programs in business management and accountancy, equipping students with entrepreneurial skills.</td>
+                        <td>1500+</td>
+                    </tr>
+                    <tr>
+                        <td>CAS</td>
+                        <td>College of Arts and Sciences</td>
+                        <td>Offers a wide range of liberal arts programs that foster critical thinking and creativity.</td>
+                        <td colspan="2">Unspecified</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="media-container">
+        <div class="video-section">
+            <h2>CMU Hymn</h2>
+            <p>Experience the pride of City of Malabon University through our official hymn, performed by the CMU Chorale.</p>
+            <video controls autoplay loop muted class="media-video">
+                <source src="{{ url_for('static', filename='CMU Hymn by CMU Chorale.mp4') }}" type="video/mp4">
+                <source src="{{ url_for('static', filename='CMU Hymn by CMU Chorale.ogg') }}" type="video/ogg">
+                Video Tag is Not Supported on Your Website
+            </video>
+        </div>
+        <div class="audio-section">
+            <h2>Malabon Hymn</h2>
+            <p>Listen to the hymn that captures the essence and unity of Malabon.</p>
+            <audio src="{{ url_for('static', filename='Malabon Hymn with Lyrics.mp3') }}" controls loop class="media-audio">
+                Audio Tag is Not Supported on Your Website
+            </audio>
+        </div>
+    </div>
+
+    <div class="location-container">
+        <h1 class="location-title">City of Malabon University Location</h1>
+        <div class="map-container">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1930.0249681534942!2d120.95852547102514!3d14.653106829963756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397b590546333e1%3A0x4607f171a9035bb!2sCity%20of%20Malabon%20University!5e0!3m2!1sen!2sph!4v1732690754070!5m2!1sen!2sph" 
+                width="100%" height="450" style="border:0;" allowfullscreen loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About CMU</h3>
+                <ul>
+                    <li><a href="#">Facts & History</a></li>
+                    <li><a href="#">Vision and Mission</a></li>
+                    <li><a href="#">Transparency Seal</a></li>
+                    <li><a href="#">Careers @ CMU</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Student Life</h3>
+                <ul>
+                    <li><a href="#">Programs Offerings</a></li>
+                    <li><a href="#">Sports Program</a></li>
+                    <li><a href="#">Become a CMU Student</a></li>
+                    <li><a href="#">Downloadable Forms</a></li>
+                </ul>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                </div>
+            </div>
+    
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:email@cmu.edu.ph">Email Us</a></li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                    <a><i>
+                            Pampano cor.,<br>
+                            Maya-Maya Sts., Longos, <br>
+                            Malabon City <br>
+                            City of Malabon University
+                        </i></a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+<div class="footer-bottom">
+            <img src="{{ url_for('static', filename='images/CMU_white logo.png') }}" alt="CMU Logo" class="footer-logo">
+            <p class="copyright-text">Copyright © 2025 City of Malabon University. All Rights Reserved</p>
+        </div>
+    </footer>
+    
+    
+    <div class="preloader" id="preloader">
+            <img src="{{ url_for('static', filename='images/cmu logo.png') }}" alt="Loading Logo" id="preloader-logo">
+            <div class="counter" id="preloader-counter">0%</div>
+        </div>
+
+
+    <script>
+        const currentPage = document.body.getAttribute('data-page');
+        const navItems = document.querySelectorAll('.nav-bar .nav-item');
+
+        navItems.forEach(navItem => {
+            const text = navItem.textContent.trim().toLowerCase();
+            if (currentPage === text) {
+                navItem.classList.add('active');
+            }
+        });
+
+        // ✅ Keep preloader logic same
+        document.addEventListener('DOMContentLoaded', function () {
+            const preloader = document.getElementById('preloader');
+            const counter = document.getElementById('preloader-counter');
+            const logo = document.getElementById('preloader-logo');
+            const links = document.querySelectorAll('a');
+
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const target = this.getAttribute('target') || '_self'; 
+
+                    if (this.getAttribute('href') && this.getAttribute('href') !== '#') {
+                        e.preventDefault(); 
+                        preloader.classList.add('show'); 
+
+                        let count = 0;
+                        const interval = setInterval(() => {
+                            count += 1;
+                            counter.textContent = `${count}%`;
+
+                            logo.style.opacity = count / 100;
+                            if (count > 80) {
+                                logo.style.filter = `grayscale(${100 - count}%)`;
+                            }
+
+                            if (count >= 100) {
+                                clearInterval(interval);
+                                preloader.classList.remove('show');
+
+                                if (target === '_blank') {
+                                    window.open(this.href, '_blank'); 
+                                } else {
+                                    window.location.href = this.href; 
+                                }
+                            }
+                        }, 20); 
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

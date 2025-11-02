@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>CMU Program Offerings</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Courses.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body data-page="courses">
+    <div class="header">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/cmu logo.png') }}" alt="City of Malabon University Logo">
+            <div class="logo-text">
+                <h4>CITY OF MALABON UNIVERSITY</h4>
+                <h5>Pampano St, Maya-Maya St, Malabon, Metro Manila</h5>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <a href="{{ url_for('home') }}" target="_self" class="nav-item">
+                <img src="{{ url_for('static', filename='images/home logo.png') }}" alt="Home Icon">
+                <span>HOME</span>
+            </a>
+            <a href="{{ url_for('admission') }}" target="_self" class="nav-item">
+                <img src="{{ url_for('static', filename='images/admission logo.png') }}" alt="Admission Icon">
+                <span>ADMISSION</span>
+            </a>
+            <a href="{{ url_for('courses') }}" target="_self" class="nav-item">
+                <img src="{{ url_for('static', filename='images/courses logo.png') }}" alt="Courses Icon">
+                <span>COURSES</span>
+            </a>
+            <a href="{{ url_for('news') }}" target="_self" class="nav-item">
+                <img src="{{ url_for('static', filename='images/news logo.png') }}" alt="News Icon">
+                <span>NEWS</span>
+            </a>
+            <a href="{{ url_for('contact_us') }}" target="_self" class="nav-item">
+                <img src="{{ url_for('static', filename='images/mail logo.png') }}" alt="Contact Us Icon">
+                <span>CONTACT US</span>
+            </a>
+        </div>
+    </div>
+
+    <section class="heading">
+        <h1>COURSES</h1>
+    </section>
+
+    <!-- Example program block -->
+    <div class="program-section">
+        <img src="{{ url_for('static', filename='images/CCS_logo.png') }}" alt="CCS Logo">
+        <div class="program-details">
+            <h2>CCS</h2>
+            <h4>College of Computer Studies</h4>
+            <ul>
+                <li>Bachelor of Science in Information Technology (BSIT)</li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="flex-container">
+        <div class="images-section">
+            <div class="big-image">
+                <img src="{{ url_for('static', filename='images/CSS_1.png') }}" alt="CSS Big Image">
+            </div>
+            <div class="small-images">
+                <img src="{{ url_for('static', filename='images/CSS_2.png') }}" alt="CSS Small Image 1">
+                <img src="{{ url_for('static', filename='images/CSS_3.png') }}" alt="CSS Small Image 2">
+                <img src="{{ url_for('static', filename='images/CSS_4.png') }}" alt="CSS Small Image 3">
+                <img src="{{ url_for('static', filename='images/CSS_5.png') }}" alt="CSS Small Image 4">
+                <img src="{{ url_for('static', filename='images/CSS_6.png') }}" alt="CSS Small Image 5">
+            </div>
+        </div>
+        <div class="Description">
+            <h3>Description</h3>
+            <p>The Information Technology (IT) course at City of Malabon University (CMU) is designed to equip students with the knowledge, skills, and competencies required to excel in the dynamic field of technology. This program provides a comprehensive foundation in computer systems, software development, networking, data management, and emerging technologies, fostering problem-solving and critical thinking skills.</p>
+            <a href="{{ url_for('enroll') }}"><button>Enroll now</button></a>
+        </div>
+    </section>
+    <hr>
+
+<div class="program-section">
+    <img src="{{ url_for('static', filename='images/CCJE_logo.png') }}" alt="CCJE Logo">
+    <div class="program-details">
+        <h2>CCJE</h2>
+        <h4>College of Criminal Justice Education</h4>
+        <ul>
+            <li>Bachelor of Science in Criminology</li>
+        </ul>
+    </div>
+</div>
+
+<section class="flex-container">
+    <div class="images-section">
+        <div class="big-image">
+            <img src="{{ url_for('static', filename='images/CRIM_1.png') }}" alt="CRIM Big Image">
+        </div>
+        <div class="small-images">
+            <img src="{{ url_for('static', filename='images/CRIM_2.png') }}" alt="CRIM Small Image 1">
+            <img src="{{ url_for('static', filename='images/CRIM_3.png') }}" alt="CRIM Small Image 2">
+            <img src="{{ url_for('static', filename='images/CRIM_4.png') }}" alt="CRIM Small Image 3">
+            <img src="{{ url_for('static', filename='images/CRIM_5.png') }}" alt="CRIM Small Image 4">
+            <img src="{{ url_for('static', filename='images/CRIM_6.png') }}" alt="CRIM Small Image 5">
+        </div>
+    </div>
+    <div class="Description">
+        <h3>Description</h3>
+        <p>The Criminology program at City of Malabon University (CMU) is designed to prepare students for careers in law enforcement, criminal justice, and public safety. This course provides comprehensive training in crime prevention, law enforcement administration, forensic science, criminal behavior analysis, and community safety, fostering analytical thinking and ethical decision-making skills.</p>
+        <a href="{{ url_for('enroll') }}"><button>Enroll now</button></a>
+    </div>
+</section>
+
+<hr>
+
+<div class="program-section">
+    <img src="{{ url_for('static', filename='images/CTE_logo.png') }}" alt="CTE Logo">
+    <div class="program-details">
+        <h2>CTE</h2>
+        <h4>College of Teacher Education</h4>
+        <ul>
+            <li>Bachelor in Elementary Education (BEED)</li>
+            <li>Bachelor in Secondary Education (BSE)</li>
+            <ol type="a">
+                <li>English</li>
+                <li>Mathematics</li>
+                <li>Social Studies</li>
+            </ol>
+            <li>Bachelor of Early Childhood Education (BECED)</li>
+        </ul>
+    </div>
+</div>
+
+<section class="flex-container">
+    <div class="images-section">
+        <div class="big-image">
+            <img src="{{ url_for('static', filename='images/CTE_1.png') }}" alt="CTE Big Image">
+        </div>
+        <div class="small-images">
+            <img src="{{ url_for('static', filename='images/CTE_2.png') }}" alt="CTE Small Image 1">
+            <img src="{{ url_for('static', filename='images/CTE_3.png') }}" alt="CTE Small Image 2">
+            <img src="{{ url_for('static', filename='images/CTE_4.png') }}" alt="CTE Small Image 3">
+            <img src="{{ url_for('static', filename='images/CTE_5.png') }}" alt="CTE Small Image 4">
+            <img src="{{ url_for('static', filename='images/CTE_6.png') }}" alt="CTE Small Image 5">
+        </div>
+    </div>
+    <div class="Description">
+        <h3>Description</h3>
+        <p>The Teacher Education programs at City of Malabon University (CMU) aim to develop future educators with a passion for teaching and a commitment to lifelong learning. These programs offer a strong foundation in pedagogy, curriculum development, classroom management, and specialized training in elementary, secondary, and early childhood education, equipping students to inspire and educate the next generation effectively.</p>
+        <a href="{{ url_for('enroll') }}"><button>Enroll now</button></a>
+    </div>
+</section>
+
+<hr>
+
+<div class="program-section">
+    <img src="{{ url_for('static', filename='images/CBA_logo.png') }}" alt="CBA Logo">
+    <div class="program-details">
+        <h2>CBA</h2>
+        <h4>College of Business and Accountancy</h4>
+        <ul>
+            <li>Bachelor of Science in Business Administration (BSBA) major in:</li>
+            <ol type="i">
+                <li>Financial Management</li>
+                <li>Human Resource Management</li>
+                <li>Marketing Management</li>
+            </ol>
+        </ul>
+    </div>
+</div>
+
+<section class="flex-container">
+    <div class="images-section">
+        <div class="big-image">
+            <img src="{{ url_for('static', filename='images/CBA_1.png') }}" alt="CBA Big Image">
+        </div>
+        <div class="small-images">
+            <img src="{{ url_for('static', filename='images/CBA_2.png') }}" alt="CBA Small Image 1">
+            <img src="{{ url_for('static', filename='images/CBA_3.png') }}" alt="CBA Small Image 2">
+            <img src="{{ url_for('static', filename='images/CBA_4.png') }}" alt="CBA Small Image 3">
+            <img src="{{ url_for('static', filename='images/CBA_5.png') }}" alt="CBA Small Image 4">
+            <img src="{{ url_for('static', filename='images/CBA_6.png') }}" alt="CBA Small Image 5">
+        </div>
+    </div>
+    <div class="Description">
+        <h3>Description</h3>
+        <p>The Business and Accountancy programs at City of Malabon University (CMU) are crafted to nurture innovative leaders and skilled professionals in the fields of business and finance. These programs provide an in-depth understanding of financial management, marketing strategies, human resource development, and accounting principles, fostering entrepreneurial mindsets and strategic thinking for real-world business challenges.</p>
+        <a href="{{ url_for('enroll') }}"><button>Enroll now</button></a>
+    </div>
+</section>
+
+<hr>
+
+<div class="program-section">
+    <img src="{{ url_for('static', filename='images/CAS_logo.png') }}" alt="CAS Logo">
+    <div class="program-details">
+        <h2>CAS</h2>
+        <h4>College of Arts and Sciences</h4>
+        <ul>
+            <li>Bachelor of Arts in Journalism</li>
+            <li>Bachelor of Arts in Political Science</li>
+            <li>Bachelor of Public Administration</li>
+            <li>Bachelor of Science in Social Work</li>
+        </ul>
+    </div>
+</div>
+
+<section class="flex-container">
+    <div class="images-section">
+        <div class="big-image">
+            <img src="{{ url_for('static', filename='images/CAS_1.png') }}" alt="CAS Big Image">
+        </div>
+        <div class="small-images">
+            <img src="{{ url_for('static', filename='images/CAS_2.png') }}" alt="CAS Small Image 1">
+            <img src="{{ url_for('static', filename='images/CAS_3.png') }}" alt="CAS Small Image 2">
+            <img src="{{ url_for('static', filename='images/CAS_4.png') }}" alt="CAS Small Image 3">
+            <img src="{{ url_for('static', filename='images/CAS_5.png') }}" alt="CAS Small Image 4">
+            <img src="{{ url_for('static', filename='images/CAS_6.png') }}" alt="CAS Small Image 5">
+        </div>
+    </div>
+    <div class="Description">
+        <h3>Description</h3>
+        <p>The Arts and Sciences programs at City of Malabon University (CMU) focus on cultivating critical thinkers, effective communicators, and compassionate leaders. These courses provide a robust foundation in journalism, political science, public administration, and social work, fostering analytical skills, civic responsibility, and a commitment to community service and social justice.</p>
+        <a href="{{ url_for('enroll') }}"><button>Enroll now</button></a>
+    </div>
+</section>
+
+<hr>
+
+<div class="program-section">
+    <img src="{{ url_for('static', filename='images/COA_logo.png') }}" alt="COA Logo">
+    <div class="program-details">
+        <h2>COA</h2>
+        <h4>College of Accountancy</h4>
+        <ul>
+            <li>Bachelor of Science in Accountancy</li>
+            <li>Bachelor of Science in Management Accounting</li>
+        </ul>
+    </div>
+</div>
+
+
+    <section class="flex-container">
+        <div class="images-section">
+            <div class="big-image">
+                <img src="{{ url_for('static', filename='images/COA_1.png') }}" alt="CSS Big Image">
+            </div>
+            <div class="small-images">
+                <img src="{{ url_for('static', filename='images/COA_2.png') }}" alt="CSS Small Image 1">
+                <img src="{{ url_for('static', filename='images/COA_3.png') }}" alt="CSS Small Image 2">
+                <img src="{{ url_for('static', filename='images/COA_4.png') }}" alt="CSS Small Image 3">
+                <img src="{{ url_for('static', filename='images/COA_5.png') }}" alt="CSS Small Image 4">
+                <img src="{{ url_for('static', filename='images/COA_6.png') }}" alt="CSS Small Image 5">
+            </div>
+        </div>
+        <div class="Description">
+            <h3>Description</h3>
+            <p>The College of Accountancy (COA) at City of Malabon University (CMU) is dedicated to developing competent, ethical, and globally competitive accounting professionals. The program provides comprehensive training in financial accounting, auditing, taxation, and management accounting, equipping students with the analytical, technical, and decision-making skills necessary for careers in accounting, finance, and business management. It also emphasizes professional integrity, critical thinking, and a strong foundation in ethical and legal standards in the accounting profession.</p>
+            <a href="Enrollment Form.html"><button>Enroll now</button></a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About CMU</h3>
+                <ul>
+                    <li><a href="#">Facts & History</a></li>
+                    <li><a href="#">Vision and Mission</a></li>
+                    <li><a href="#">Transparency Seal</a></li>
+                    <li><a href="#">Careers @ CMU</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i> Facebook</a>
+                    <a href="#"><i class="fab fa-youtube"></i> YouTube</a>
+                    <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                    <a href="#"><i class="fab fa-twitter"></i> Twitter</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> <a href="mailto:email@cmu.edu.ph">Email Us</a></li>
+                    <li><i class="fas fa-map-marker-alt"></i>
+                    <a><i>
+                            Pampano cor.,<br>
+                            Maya-Maya Sts., Longos, <br>
+                            Malabon City <br>
+                            City of Malabon University
+                        </i></a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+<div class="footer-bottom">
+            <img src="{{ url_for('static', filename='images/CMU_white logo.png') }}" alt="CMU Logo" class="footer-logo">
+            <p class="copyright-text">Copyright © 2025 City of Malabon University. All Rights Reserved</p>
+        </div>
+    </footer>
+    
+    
+    <div class="preloader" id="preloader">
+            <img src="{{ url_for('static', filename='images/cmu logo.png') }}" alt="Loading Logo" id="preloader-logo">
+            <div class="counter" id="preloader-counter">0%</div>
+        </div>
+
+    <script>
+        const currentPage = document.body.getAttribute('data-page');
+        const navItems = document.querySelectorAll('.nav-bar .nav-item');
+
+        navItems.forEach(navItem => {
+            const text = navItem.textContent.trim().toLowerCase();
+            if (currentPage === text) {
+                navItem.classList.add('active');
+            }
+        });
+
+        // ✅ Keep preloader logic same
+        document.addEventListener('DOMContentLoaded', function () {
+            const preloader = document.getElementById('preloader');
+            const counter = document.getElementById('preloader-counter');
+            const logo = document.getElementById('preloader-logo');
+            const links = document.querySelectorAll('a');
+
+            links.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const target = this.getAttribute('target') || '_self'; 
+
+                    if (this.getAttribute('href') && this.getAttribute('href') !== '#') {
+                        e.preventDefault(); 
+                        preloader.classList.add('show'); 
+
+                        let count = 0;
+                        const interval = setInterval(() => {
+                            count += 1;
+                            counter.textContent = `${count}%`;
+
+                            logo.style.opacity = count / 100;
+                            if (count > 80) {
+                                logo.style.filter = `grayscale(${100 - count}%)`;
+                            }
+
+                            if (count >= 100) {
+                                clearInterval(interval);
+                                preloader.classList.remove('show');
+
+                                if (target === '_blank') {
+                                    window.open(this.href, '_blank'); 
+                                } else {
+                                    window.location.href = this.href; 
+                                }
+                            }
+                        }, 20); 
+                    }
+                });
+            });
+        });
+    </script>s
+</body>
+</html>
